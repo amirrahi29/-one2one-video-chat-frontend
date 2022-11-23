@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { Assignment } from '@material-ui/icons';
 import { SocketContext } from '../Context';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaCopy } from "react-icons/fa";
 
 const Sidebar = ({ children }) => {
 
@@ -24,7 +24,7 @@ const Sidebar = ({ children }) => {
     <div className='container' style={{ flex: 1, flexDirection: 'row', width: '400px' }}>
       {children}
       <div style={{ background: 'black', padding: 16, borderRadius: 16, color: 'white' }}>
-        <p style={{ cursor: 'pointer' }}>Meeting ID : {me} <CopyToClipboard text={me}><Assignment fontSize="small" />
+        <p style={{ cursor: 'pointer' }}>Meeting ID : {me} <CopyToClipboard text={me}><FaCopy fontSize="small" />
         </CopyToClipboard> </p><hr />
         <div className='row'>
           <div className='col-md-6'>

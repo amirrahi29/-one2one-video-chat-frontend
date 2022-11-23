@@ -7,7 +7,7 @@ const App = () => {
  
   return (
     <div className='container' style={{display:'flex',flexDirection:'column',alignContent:'center'}}>
-      <h2 style={{alignSelf:'center'}}>Rojkharido Video Verification</h2>
+      <h2 style={{alignSelf:'center'}}>ROJKHARIDO VIDEO VERIFICATION</h2>
       <hr/>
       <VideoPlayer />
       <Sidebar>

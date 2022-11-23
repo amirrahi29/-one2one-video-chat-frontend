@@ -4,6 +4,7 @@ import { SocketContext } from '../Context';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaCopy } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const Sidebar = ({ children }) => {
 
@@ -28,11 +29,11 @@ const Sidebar = ({ children }) => {
         </CopyToClipboard> </p><hr />
         <div className='row'>
           <div className='col-md-6'>
-            <label>Name</label>
+            <label>Name*</label>
             <input type='text' value={name} onChange={(e) => setName(e.target.value)} className='form-control' placeholder='Enter your name' />
           </div>
           <div className='col-md-6'>
-            <label>Meeting ID</label>
+            <label>Meeting ID*</label>
             <input type='text' value={idToCall} onChange={(e) => setIdToCall(e.target.value)} className='form-control' placeholder='Enter meeting ID' />
           </div>
         </div>
@@ -58,7 +59,7 @@ const Sidebar = ({ children }) => {
                     </div>
                   </div>
                   :
-                  <button onClick={checkCredentials} className='form-control' style={{ background: 'green', color: 'white' }}>Call Now</button>
+                  <button onClick={checkCredentials} className='form-control' style={{ background: 'green', color: 'white' }}><span><FaPhoneAlt/>&nbsp;&nbsp;Call Now</span></button>
             }
           </div>
         </div>
